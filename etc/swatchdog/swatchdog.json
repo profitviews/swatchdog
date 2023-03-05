@@ -1,0 +1,47 @@
+{
+    "logfiles": [
+      {
+        "directory": "/home/ubuntu/pnl/pnl",
+        "files": [ 
+            {
+                "name": "pnl-django.log", 
+                "watchfor": "django_pnl_server.cfg"
+            },
+            {
+                "name": "pnl-server.log",
+                "watchfor": "django_pnl_server.cfg"
+            },
+            {
+                "name": "pnl-user.log",
+                "watchfor": "django_pnl_server.cfg"
+            }     
+        ]
+      },
+      {
+        "directory": "/home/ubuntu/markets/markets",
+        "files": [
+            {
+                "name": "markets-django.log",
+                "watchfor": "django_pnl_server.cfg"
+            },
+            {
+                "name": "markets-server.log",
+                "watchfor": "django_pnl_server.cfg"
+            }
+        ]
+      },
+      {
+        "directory": "/home/ubuntu/trading/trading",
+        "files": [
+            {
+                "name": "trader-django.log",
+                "watchfor": "django_pnl_server.cfg"
+            },
+            {
+                "name": "trader-server.log",
+                "watchfor": "django_pnl_server.cfg"
+            }
+        ]
+      }
+    ]
+}  
