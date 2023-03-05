@@ -1,7 +1,7 @@
 {
     "logfiles": [
       {
-        "directory": "/home/richard/profitviews/swatchdog/test",
+        "directory": "/home/your/hierarchy/profitviews/swatchdog/test",
         "files": [ 
             {
                 "name": "test1.log", 

@@ -1,45 +1,45 @@
 {
     "logfiles": [
       {
-        "directory": "/home/ubuntu/pnl/pnl",
+        "directory": "/home/directory/path",
         "files": [ 
             {
-                "name": "pnl-django.log", 
-                "watchfor": "django_pnl_server.cfg"
+                "name": "first_logfile.log", 
+                "watchfor": "first_logfile_config.cfg"
             },
             {
-                "name": "pnl-server.log",
-                "watchfor": "django_pnl_server.cfg"
+                "name": "second_logfile.log",
+                "watchfor": "next_logfile_config.cfg"
             },
             {
-                "name": "pnl-user.log",
-                "watchfor": "django_pnl_server.cfg"
+                "name": "another_logfile.log",
+                "watchfor": "subsequent_config.cfg"
             }     
         ]
       },
       {
-        "directory": "/home/ubuntu/markets/markets",
+        "directory": "/home/directory/other/path",
         "files": [
             {
-                "name": "markets-django.log",
-                "watchfor": "django_pnl_server.cfg"
+                "name": "logfile_other.log",
+                "watchfor": "other_config.cfg"
             },
             {
-                "name": "markets-server.log",
-                "watchfor": "django_pnl_server.cfg"
+                "name": "logfile_another.log",
+                "watchfor": "yet_another_config.cfg"
             }
         ]
       },
       {
-        "directory": "/home/ubuntu/trading/trading",
+        "directory": "/another/path/to/a/logfile",
         "files": [
             {
-                "name": "trader-django.log",
-                "watchfor": "django_pnl_server.cfg"
+                "name": "that_logfile.log",
+                "watchfor": "associated_config.cfg"
             },
             {
-                "name": "trader-server.log",
-                "watchfor": "django_pnl_server.cfg"
+                "name": "again_a_logfile.log",
+                "watchfor": "yet_another_config.cfg"
             }
         ]
       }
