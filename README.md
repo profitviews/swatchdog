@@ -21,6 +21,7 @@ Create:
 * `/etc/swatchdog`: copy all files from `$PREFIX/swatchdog/etc/swatchdog` into there with `sudo cp` 
 * `/etc/swatchdog/watchfor`: similarly `sudo cp` from `$PREFIX/swatchdog/etc/swatchdog/watchfor`
 * `/etc/systemd/system/swatchdog.service` as a copy of `$PREFIX/swatchdog/etc/systemd/system/swatchdog.service`.
+  
 Of course, you can (and should) do all of this via a staging directory.
 
 3. Identify Log Files
