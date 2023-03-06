@@ -5,8 +5,8 @@ After=network.target
 [Service]
 Type=forking
 EnvironmentFile=/etc/swatchdog/env
-ExecStart=/usr/bin/env -i ${PYTHON_EXECUTABLE} /etc/swatchdog/swatchdog.py 
-ExecStop=/usr/bin/env -i ${PYTHON_EXECUTABLE} /etc/swatchdog/swatchdog.py -t
+ExecStart=/usr/bin/env ${PYTHON_EXECUTABLE} /etc/swatchdog/swatchdog.py 
+ExecStop=/usr/bin/env ${PYTHON_EXECUTABLE} /etc/swatchdog/swatchdog.py -t
 
 [Install]
 WantedBy=multi-user.target
