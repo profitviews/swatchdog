@@ -8,6 +8,8 @@ In particular, it provides a way to alert to Slack.  Other systems can easily be
 
 ## Installation
 
+The following should be performed on each server that contains log-files to be monitored.
+
 1. Clone the Repo
 
 Place it in a convenient place.  We'll use $PREFIX to represent that directory.
