@@ -1,6 +1,6 @@
 # Swatchdog
 
-This repo provides a simple - but useable and quite robust - solution for those who want log-file stimulated alerts.
+This repo provides a simple - but useable and quite robust - solution for those who want log-file stimulated alerts.  It is based on the system used by [ProfitView](https://profitview.net).  There is a write-up on it in [ProfitView's blog](https://profitview.net/blog/simple-effective-system-alerts).
 
 In particular, it provides a way to alert to Slack.  Other systems can easily be added.
 
@@ -38,7 +38,7 @@ then change the form of the text to be generated:
       exec $python_executable /etc/swatchdog/swatchdog_slack.py test_server 'Message to send' "$0"
 ```
 
-Change `test_server` to the server name that the log-file is associated with and `Message to send` to a prefix to the log-line that will be sent.
+Change `test_server` to the server name that the log-file is associated with and `Message to send` to a prefix to the log-line that will be sent. If you wish to send an alternative location of the `EnvironmentFile` that can be passed as the last parameter.  It defaults to `/etc/swatchdog/env`.
 
 4. Specify Log File Locations
 
@@ -57,3 +57,4 @@ sudo systemctl start swatchdog.service
 ```
 
 This should result in a running system.  
+
