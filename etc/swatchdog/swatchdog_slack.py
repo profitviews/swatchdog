@@ -30,11 +30,11 @@ def send_to_slack(slack_token, channel, server, headline, error_text):
         print(f"Message would have been: {message}")
 
 if __name__ == '__main__':
-    if len(sys.argv) <= Slack.ARGS - 1:
+    if (argc := len(sys.argv)) < Slack.ARGS:
         print(f"There must be at least {Slack.ARGS - 1} arguments: {sys.argv}")
         exit(-1)
     
-    with open(sys.argv.get(Slack.ENVS) or '/etc/swatchdog/env') as envs:
+    with open(sys.argv[Slack.ENVS] if argc == Slack.ARGS + 1 else '/etc/swatchdog/env') as envs:
         # Read environment
         env = dict(v.strip().split('=') for v in envs.readlines())
 
