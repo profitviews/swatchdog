@@ -4,8 +4,8 @@
         "directory": "/home/your/hierarchy/profitviews/swatchdog/test",
         "files": [ 
             {
-                "name": "test1.log", 
-                "watchfor": "test1.cfg"
+                "name": "test.log", 
+                "watchfor": "test.cfg"
             },
             {
                 "name": "test2.log",
