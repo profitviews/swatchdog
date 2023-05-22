@@ -6,7 +6,7 @@ from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
 class Slack:
-    ARGS, SERV, HEAD, ERRS, ENVS = 4, 1, 2, 3, 4
+    ARGS, ENVS, SERV, HEAD, ERRS = 5, 1, 2, 3, 4
 
 def send_to_slack(slack_token, channel, server, headline, error_text):
 
@@ -34,10 +34,14 @@ if __name__ == '__main__':
         print(f"There must be at least {Slack.ARGS - 1} arguments: {sys.argv}")
         exit(-1)
     
-    with open(sys.argv[Slack.ENVS] if argc == Slack.ARGS + 1 else '/etc/swatchdog/env') as envs:
+    with open(sys.argv[Slack.ENVS]) as envs:
         # Read environment
         env = dict(v.strip().split('=') for v in envs.readlines())
 
+        # Concatenate all remaining arguments as continuing error text
+        error_text = " ".join(sys.argv[Slack.ERRS:])
+
         send_to_slack(
             env['SLACK_TOKEN'], env['SLACK_CHANNEL'], 
-            sys.argv[Slack.SERV], sys.argv[Slack.HEAD], sys.argv[Slack.ERRS])
+            sys.argv[Slack.SERV], sys.argv[Slack.HEAD], error_text)
+        
